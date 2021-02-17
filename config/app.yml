@@ -15,6 +15,7 @@ images:
   frontend: quay.io/openware/baseapp:2.6.5
   tower: quay.io/openware/tower:2.6.36
   rango: quay.io/openware/rango:2.6.1
+  sonic: quay.io/openware/baseapp:sonic
 finex:
   enabled: false
   image: quay.io/openware/finex:2.6.12
@@ -27,7 +28,7 @@ kyc:
   sandbox_mode: true
   api_endpoint: https://api.kycaid.com/
 vault:
-  token: changeme
+  token: s.fqjDWGQC3pzTX4GMsOOMwvPA
 database:
   host: db
   adapter: mysql

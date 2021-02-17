@@ -60,9 +60,9 @@ services:
       - ../config/applogic/management_api_v2.yml:/home/app/config/management_api_v2.yml
 
   sonic:
-  restart: always
-  image: "quay.io/openware/sonic"
-  env_file:
-    - ../config/sonic.env
-    - ../config/kaigara.env
-  command: bash -c "kaigara ./sonic serve"
+    restart: always
+    image: "<%= @config['images']['sonic'] %>"
+    env_file:
+      - ../config/sonic.env
+      - ../config/kaigara.env
+    entrypoint: /bin/sh -c "kaigara ./bin/sonic serve"
